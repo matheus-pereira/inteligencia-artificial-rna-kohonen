@@ -1,0 +1,27 @@
+.btn span.glyphicon {
+	opacity: 0;
+}
+.btn.active span.glyphicon {
+	opacity: 1;
+}
+
+.fa {
+  color: white;
+  font-size: 28px;
+}
+
+a.linkedin {
+  background: #007bb5;
+}
+
+a.medium {
+  background: #03a87c;
+}
+
+a.github {
+  background: #24292e;
+}
+
+a.email {
+  background: #337ab7;
+}

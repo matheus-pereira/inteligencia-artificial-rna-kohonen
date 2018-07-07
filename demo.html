@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>inteligencia-artificial-rna-kohonen</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- header -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+				<span class="sr-only">Navegação</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Inteligência Artificial</a>
+			</div><!-- /.navbar-header -->
+			<div class="collapse navbar-collapse" id="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Kohonen</a></li>
+					<li class="active"><a href="#">Demo</a></li>
+					<li><a href="sobre.html">Sobre mim</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<!-- /header -->
+
+	<!-- content -->
+	<div class="container">
+
+		<h1>Classificação de Animais</h1>
+		<p>À partir das características abaixo, é possível classificar um animal qualquer entre cinco classes (anfíbios, aves, mamíferos, peixes e répteis).</p>
+		<p>Uma vez que o animal pertença a uma classe diferente das citadas acima, será associado a classe com a qual tem maior número de semelhanças.</p>
+
+
+		<!-- aplicação -->
+		<form class="form">
+
+			<div class="form-group">
+				<label for="animal">Animal</label>
+				<input id="animal" type="text" class="form-control"  placeholder="Digite o nome do animal">
+			</div>
+
+			<p>Selecione as características que seu animal possui:</p>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Aquático
+					</label>
+
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Terrestre
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Carnívoro
+					</label>
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Herbívoro
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Escamas
+					</label>
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Pelos
+					</label>
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Penas
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Brânquias
+					</label>
+
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Pulmões
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Bico
+					</label>
+
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Boca
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Dentes
+					</label>
+
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Moela
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Asas
+					</label>
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Nadadeiras
+					</label>
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Patas
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Ovos
+					</label>
+					<label class="btn btn-default">
+						<input type="checkbox" autocomplete="off">
+						<span class="glyphicon glyphicon-ok"></span> Útero
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Classificar</button>
+			</div>
+
+		</form>
+		<!-- /aplicação -->
+
+	</div>
+	<!-- /content -->
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/Kohonen.js"></script>
+	<script type="text/javascript">
+		let konohen = new Kohonen();
+
+		$('form').submit(function(event) {
+			event.preventDefault();
+			let caracteristicasDoAnimal = [];
+			$('input[type=checkbox]').each(function(index, input) {
+				let caracteristica = (input.checked === true) ? 1 : 0;
+				caracteristicasDoAnimal.push(caracteristica);
+			});
+			let classe = konohen.classificar(caracteristicasDoAnimal);
+			let nomeDoAnimal = $('#animal').val();
+			if (nomeDoAnimal == '') nomeDoAnimal = 'O animal';
+			alert(`${nomeDoAnimal} pertence a classe ${classe}`);
+		});
+	</script>
+</body>
+</html>
